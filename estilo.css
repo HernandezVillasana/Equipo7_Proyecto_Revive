@@ -13,11 +13,10 @@ body {
     background-color: #DBDDD8;
     color: #26150B;
     line-height: 1.6;
+    font-family: 'Limeligh Script', cursive;
+    
 }
 
-/* ==============================
-   ENCABEZADO
-   ============================== */
 
 header {
     background-color: #403022;
@@ -25,16 +24,15 @@ header {
     text-align: center;
     padding: 50px 20px;
     border-bottom: 8px solid #735840;
+    font-family: 'Limeligh Script', cursive;
 }
 
 header h1 {
     font-size: 48px;
     letter-spacing: 3px;
+    font-family: 'Limeligh Script', cursive;
 }
 
-/* ==============================
-   CONTENIDO PRINCIPAL
-   ============================== */
 
 main {
     width: 85%;
@@ -42,9 +40,7 @@ main {
     margin: 40px auto;
 }
 
-/* ==============================
-   SECCIONES
-   ============================== */
+
 
 section {
     background-color: #DBDDD8;
@@ -53,6 +49,7 @@ section {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(38, 21, 11, 0.15);
+    font-family: 'Limeligh Script', cursive;
 }
 
 section h2 {
@@ -61,6 +58,7 @@ section h2 {
     margin-bottom: 15px;
     border-bottom: 2px solid #A68D77;
     padding-bottom: 8px;
+    font-family: 'Limeligh Script', cursive;
 }
 
 section h3 {
@@ -68,11 +66,13 @@ section h3 {
     font-size: 21px;
     margin-top: 20px;
     margin-bottom: 5px;
+    font-family: 'Limeligh Script', cursive;
 }
 
 section p {
     color: #26150B;
     font-size: 17px;
+    font-family: 'Limeligh Script', cursive;
 }
 
 /* ==============================
