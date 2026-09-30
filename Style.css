@@ -1,165 +1,136 @@
-/* ==============================
-   ESTILOS GENERALES - REVIVE
-   ============================== */
 
-* {
+:root {
+    --color-primario: #2563eb;
+}
+
+*, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #DBDDD8;
-    color: #26150B;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8fafc;
+    color: #0f172a;
     line-height: 1.6;
-    font-family: 'Limeligh Script', cursive;
-    
+    min-height: 100vh;
 }
 
-
-header {
-    background-color: #403022;
-    color: #DBDDD8;
-    text-align: center;
-    padding: 50px 20px;
-    border-bottom: 8px solid #735840;
-    font-family: 'Limeligh Script', cursive;
+header, nav {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
-header h1 {
-    font-size: 48px;
-    letter-spacing: 3px;
-    font-family: 'Limeligh Script', cursive;
+header a, nav a {
+    color: #64748b;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
 }
 
+header a:hover, nav a:hover {
+    color: var(--color-primario);
+}
 
 main {
-    width: 85%;
-    max-width: 900px;
-    margin: 40px auto;
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
 }
 
+h1, h2, h3 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
 
+/* ==========================================================================
+   4. ESTILOS DE COMPONENTES
+   ========================================================================== */
+.catalogo, .grid-talleres {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
 
-section {
-    background-color: #DBDDD8;
-    border-left: 6px solid #A68D77;
-    margin-bottom: 30px;
-    padding: 30px;
+.card, .taller-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.75rem;
+    box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+    transition: all 0.25s ease;
+}
+
+.card:hover, .taller-card:hover {
+    border-color: var(--color-primario);
+    transform: translateY(-3px);
+}
+
+form {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 440px;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+input[type="text"], input[type="email"], select {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid #e2e8f0;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(38, 21, 11, 0.15);
-    font-family: 'Limeligh Script', cursive;
+    background-color: #f8fafc;
+    font-size: 0.95rem;
+    color: #0f172a;
+    transition: border-color 0.2s ease;
 }
 
-section h2 {
-    color: #403022;
-    font-size: 30px;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #A68D77;
-    padding-bottom: 8px;
-    font-family: 'Limeligh Script', cursive;
+input:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    background-color: #ffffff;
 }
 
-section h3 {
-    color: #735840;
-    font-size: 21px;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    font-family: 'Limeligh Script', cursive;
+button, .btn {
+    background-color: var(--color-primario);
+    color: #ffffff;
+    border: none;
+    padding: 0.85rem 1.5rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
 }
 
-section p {
-    color: #26150B;
-    font-size: 17px;
-    font-family: 'Limeligh Script', cursive;
+button:hover, .btn:hover {
+    opacity: 0.9;
 }
 
-/* ==============================
-   LISTAS
-   ============================== */
-
-ol {
-    padding-left: 25px;
-}
-
-li {
-    margin-bottom: 12px;
-    color: #26150B;
-    font-size: 17px;
-}
-
-/* ==============================
-   ENLACES
-   ============================== */
-
-a {
-    display: inline-block;
-    background-color: #403022;
-    color: #dbddd8;
-    text-decoration: none;
-    padding: 13px 25px;
-    border-radius: 6px;
-    font-weight: bold;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-}
-
-a:hover {
-    background-color: #735840;
-}
-
-/* ==============================
-   ESLOGAN
-   ============================== */
-
-section:last-of-type {
-    text-align: center;
-    border-left: none;
-    border-top: 6px solid #735840;
-}
-
-section:last-of-type strong {
-    display: block;
-    color: #403022;
-    font-size: 25px;
-    font-style: italic;
-    margin-top: 10px;
-}
-
-/* ==============================
-   DISEÑO RESPONSIVO
-   ============================== */
-
-@media (max-width: 600px) {
-
-    header {
-        padding: 35px 15px;
-    }
-
-    header h1 {
-        font-size: 38px;
+@media (max-width: 640px) {
+    header, nav {
+        padding: 1rem;
+        gap: 1rem;
     }
 
     main {
-        width: 92%;
-        margin: 25px auto;
+        margin: 1.5rem auto;
     }
 
-    section {
-        padding: 20px;
-    }
-
-    section h2 {
-        font-size: 25px;
-    }
-
-    section p,
-    li {
-        font-size: 16px;
-    }
-
-    section:last-of-type strong {
-        font-size: 21px;
+    form {
+        max-width: 100%;
+        padding: 1.25rem;
     }
 }
