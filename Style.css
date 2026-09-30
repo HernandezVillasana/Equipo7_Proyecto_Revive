@@ -1,165 +1,55 @@
-/* ==============================
-   ESTILOS GENERALES - REVIVE
-   ============================== */
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+:root {
+    --color-acento-dev2: #0066ff;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #DBDDD8;
-    color: #26150B;
-    line-height: 1.6;
-    font-family: 'Limeligh Script', cursive;
-    
-}
-
-
-header {
-    background-color: #403022;
-    color: #DBDDD8;
-    text-align: center;
-    padding: 50px 20px;
-    border-bottom: 8px solid #735840;
-    font-family: 'Limeligh Script', cursive;
-}
-
-header h1 {
-    font-size: 48px;
-    letter-spacing: 3px;
-    font-family: 'Limeligh Script', cursive;
-}
-
-
-main {
-    width: 85%;
-    max-width: 900px;
+.vista-detalle {
+    max-width: 600px;
     margin: 40px auto;
+    font-family: sans-serif;
 }
 
-
-
-section {
-    background-color: #DBDDD8;
-    border-left: 6px solid #A68D77;
-    margin-bottom: 30px;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(38, 21, 11, 0.15);
-    font-family: 'Limeligh Script', cursive;
+.vista-detalle h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
-section h2 {
-    color: #403022;
-    font-size: 30px;
+.vista-detalle p {
     margin-bottom: 15px;
-    border-bottom: 2px solid #A68D77;
-    padding-bottom: 8px;
-    font-family: 'Limeligh Script', cursive;
+    color: #333;
 }
 
-section h3 {
-    color: #735840;
-    font-size: 21px;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    font-family: 'Limeligh Script', cursive;
+.vista-detalle h2 {
+    font-size: 22px;
+    margin-top: 40px;
+    margin-bottom: 15px;
 }
 
-section p {
-    color: #26150B;
-    font-size: 17px;
-    font-family: 'Limeligh Script', cursive;
-}
-
-/* ==============================
-   LISTAS
-   ============================== */
-
-ol {
-    padding-left: 25px;
-}
-
-li {
-    margin-bottom: 12px;
-    color: #26150B;
-    font-size: 17px;
-}
-
-/* ==============================
-   ENLACES
-   ============================== */
-
-a {
-    display: inline-block;
-    background-color: #403022;
-    color: #dbddd8;
-    text-decoration: none;
-    padding: 13px 25px;
-    border-radius: 6px;
-    font-weight: bold;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-}
-
-a:hover {
-    background-color: #735840;
-}
-
-/* ==============================
-   ESLOGAN
-   ============================== */
-
-section:last-of-type {
-    text-align: center;
-    border-left: none;
-    border-top: 6px solid #735840;
-}
-
-section:last-of-type strong {
+.vista-detalle input {
     display: block;
-    color: #403022;
-    font-size: 25px;
-    font-style: italic;
-    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-/* ==============================
-   DISEÑO RESPONSIVO
-   ============================== */
+.btn-dev2 {
+    background-color: var(--color-acento-dev2);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
 
-@media (max-width: 600px) {
+.mensaje-exito {
+    color: #28a745;
+    font-weight: bold;
+    margin-top: 15px;
+}
 
-    header {
-        padding: 35px 15px;
-    }
-
-    header h1 {
-        font-size: 38px;
-    }
-
-    main {
-        width: 92%;
-        margin: 25px auto;
-    }
-
-    section {
-        padding: 20px;
-    }
-
-    section h2 {
-        font-size: 25px;
-    }
-
-    section p,
-    li {
-        font-size: 16px;
-    }
-
-    section:last-of-type strong {
-        font-size: 21px;
-    }
+.error-auth {
+    color: #dc3545;
+    margin-top: 10px;
 }
