@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle del Taller - CECyT 9</title>
+  <!-- Enlace al archivo CSS compartido -->
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+  <!-- Cabecera de navegación -->
+  <header>
+    <a href="index.html">Talleres</a>
+    <a href="registro.html">Iniciar sesión</a>
+  </header>
+
+  <main>
+    <!-- 1. Detalle del Taller -->
+    <section class="detalle-taller">
+      <h1>Introducción a Python</h1>
+      <p class="instructor">Instructor: Ing. María López</p>
+      <p class="fecha">Fecha: <time datetime="2026-08-10">2026-08-10</time></p>
+      <p class="asistentes">Asistentes registrados: 133 / 25</p>
+    </section>
+
+    <!-- 2. Formulario de Registro de Asistencia -->
+    <section class="seccion-registro">
+      <h2>Registrar asistencia</h2>
+      <form>
+        <input type="text" placeholder="Nombre completo" required>
+        <input type="text" placeholder="Boleta" required>
+        <button type="submit" class="btn">Registrar</button>
+      </form>
+    </section>
+
+    <!-- 3. Bitácora de Alumnos Registrados -->
+    <section class="seccion-alumnos">
+      <h2>Alumnos registrados</h2>
+      <p class="alerta-estado">No autorizado</p>
+    </section>
+  </main>
+
+</body>
+</html>

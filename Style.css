@@ -1,39 +1,220 @@
 :root {
-    --color-primario: #ccccd6;
+    --color-primario: #2563eb;
+    --color-acento: #0d9488;
     --color-acento-lider: #23a7e5;
+    --color-fondo: #f8fafc;
+    --color-superficie: #ffffff;
+    --color-texto-principal: #0f172a;
+    --color-texto-secundario: #475569;
+    --color-texto-muto: #64748b;
+    --color-borde: #e2e8f0;
+    --sombra-card: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+    --radio-card: 12px;
+    --radio-input: 8px;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto-principal);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+header, nav {
+    background-color: var(--color-superficie);
+    border-bottom: 1px solid var(--color-borde);
+    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+header a, nav a {
+    color: var(--color-texto-muto);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+header a:hover, nav a:hover {
+    color: var(--color-primario);
+}
+
+main {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.catalogo-header {
+    margin-bottom: 2rem;
+}
+
+.catalogo-header h1 {
+    font-size: 2rem;
+    color: var(--color-texto-principal);
+    margin-bottom: 0.5rem;
+}
+
+.catalogo-header p {
+    color: var(--color-texto-secundario);
+    font-size: 1.05rem;
+}
+
+.catalogo, .grid-talleres, .talleres-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.card, .taller-card {
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-card);
+    padding: 1.75rem;
+    box-shadow: var(--sombra-card);
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+}
+
+.card:hover, .taller-card:hover {
+    border-color: var(--color-acento);
+    transform: translateY(-3px);
+}
+
+.taller-card h2 {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-texto-principal);
+    line-height: 1.3;
+}
+
+.taller-card .instructor {
+    color: var(--color-texto-secundario);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.taller-card .fecha {
+    color: var(--color-acento);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: auto;
+}
+
+form {
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-card);
+    padding: 2rem;
+    max-width: 440px;
+    margin-top: 1.5rem;
+    box-shadow: var(--sombra-card);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+input[type="text"], input[type="email"], select {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-input);
+    background-color: var(--color-fondo);
+    font-size: 0.95rem;
+    color: var(--color-texto-principal);
+    transition: border-color 0.2s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    background-color: var(--color-superficie);
+}
+
+button, .btn {
+    background-color: var(--color-primario);
+    color: var(--color-superficie);
+    border: none;
+    padding: 0.85rem 1.5rem;
+    border-radius: var(--radio-input);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+button:hover, .btn:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 640px) {
+    header, nav {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    main {
+        margin: 1.5rem auto;
+    }
+
+    form {
+        max-width: 100%;
+        padding: 1.25rem;
+    }
+}
+
+
+
 .registro {
-border: 2px solid var(--color-acento-lider);
-padding: 20px;
-margin-top: 15px;
-border-radius: 6px;
-background-color: #f9fff9;
+    border: 2px solid var(--color-acento-lider);
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 6px;
+    background-color: #f9fff9;
 }
 
 .registro h2 {
-color: var(--color-acento-lider);
-margin-bottom: 10px;
+    color: var(--color-acento-lider);
+    margin-bottom: 10px;
 }
 
 .registro p {
-margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .registro form {
-max-width: 400px;
+    max-width: 400px;
 }
 
 .registro button {
-background-color: var(--color-acento-lider);
+    background-color: var(--color-acento-lider);
 }
 
 .registro button:hover {
-background-color: #1d65f5;
+    background-color: #1d65f5;
 }
 
 @media (max-width: 600px) {
-.registro {
-padding: 15px;
+    .registro {
+        padding: 15px;
+    }
 }
-}
+
