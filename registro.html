@@ -1,0 +1,48 @@
+<!DOCTYPE html> <html lang="es"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Registro de Asistencia - CECyT 9</title> <link rel="stylesheet" href="styles.css"> </head> <body>
+<header>
+    <h1>Registro de Asistencia</h1>
+
+    <nav>
+        <a href="index.html">Talleres</a>
+        <a href="detalle.html">Detalle del taller</a>
+    </nav>
+</header>
+
+<main>
+    <section class="registro">
+        <h2>Registrar asistencia</h2>
+        <p>Completa los datos para registrar tu asistencia al taller.</p>
+
+        <form>
+            <label for="nombre">Nombre completo</label>
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Escribe tu nombre completo"
+                required
+            >
+
+            <label for="boleta">Número de boleta</label>
+            <input
+                type="text"
+                id="boleta"
+                name="boleta"
+                placeholder="Escribe tu boleta"
+                required
+            >
+
+            <label for="taller">Taller</label>
+            <select id="taller" name="taller" required>
+                <option value="">Selecciona un taller</option>
+                <option value="python">Introducción a Python</option>
+                <option value="redes">Fundamentos de Redes</option>
+                <option value="bases-datos">Diseño de Bases de Datos</option>
+            </select>
+
+            <button type="submit">Registrar asistencia</button>
+        </form>
+    </section>
+</main>
+
+</body> </html>

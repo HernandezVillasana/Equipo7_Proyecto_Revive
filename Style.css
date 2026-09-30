@@ -1,9 +1,7 @@
-/* ==========================================================================
-   1. VARIABLES DE ENTORNO Y CONFIGURACIÓN GLOBAL (:root)
-   ========================================================================== */
-   :root {
+:root {
     --color-primario: #2563eb;
-    --color-acento: #0d9488; /* Tu variable de acento */
+    --color-acento: #0d9488;
+    --color-acento-lider: #23a7e5;
     --color-fondo: #f8fafc;
     --color-superficie: #ffffff;
     --color-texto-principal: #0f172a;
@@ -15,7 +13,6 @@
     --radio-input: 8px;
 }
 
-/* Reset básico */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -30,9 +27,6 @@ body {
     min-height: 100vh;
 }
 
-/* ==========================================================================
-   2. CABECERA Y NAVEGACIÓN
-   ========================================================================== */
 header, nav {
     background-color: var(--color-superficie);
     border-bottom: 1px solid var(--color-borde);
@@ -80,9 +74,6 @@ h1, h2, h3 {
     font-size: 1.05rem;
 }
 
-/* ==========================================================================
-   3. BLOQUE DE ESTILOS DEL CATÁLOGO DE TALLERES (TARJETAS)
-   ========================================================================== */
 .catalogo, .grid-talleres, .talleres-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -128,9 +119,6 @@ h1, h2, h3 {
     margin-top: auto;
 }
 
-/* ==========================================================================
-   4. FORMULARIO Y BOTONES
-   ========================================================================== */
 form {
     background: var(--color-superficie);
     border: 1px solid var(--color-borde);
@@ -177,9 +165,6 @@ button:hover, .btn:hover {
     opacity: 0.9;
 }
 
-/* ==========================================================================
-   5. MEDIA QUERIES (RESPONSIVE)
-   ========================================================================== */
 @media (max-width: 640px) {
     header, nav {
         padding: 1rem;
@@ -195,3 +180,41 @@ button:hover, .btn:hover {
         padding: 1.25rem;
     }
 }
+
+
+
+.registro {
+    border: 2px solid var(--color-acento-lider);
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 6px;
+    background-color: #f9fff9;
+}
+
+.registro h2 {
+    color: var(--color-acento-lider);
+    margin-bottom: 10px;
+}
+
+.registro p {
+    margin-bottom: 15px;
+}
+
+.registro form {
+    max-width: 400px;
+}
+
+.registro button {
+    background-color: var(--color-acento-lider);
+}
+
+.registro button:hover {
+    background-color: #1d65f5;
+}
+
+@media (max-width: 600px) {
+    .registro {
+        padding: 15px;
+    }
+}
+
