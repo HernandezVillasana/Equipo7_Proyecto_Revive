@@ -1,165 +1,39 @@
-/* ==============================
-   ESTILOS GENERALES - REVIVE
-   ============================== */
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+:root {
+    --color-primario: #ccccd6;
+    --color-acento-lider: #23a7e5;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #DBDDD8;
-    color: #26150B;
-    line-height: 1.6;
-    font-family: 'Limeligh Script', cursive;
-    
+.registro {
+border: 2px solid var(--color-acento-lider);
+padding: 20px;
+margin-top: 15px;
+border-radius: 6px;
+background-color: #f9fff9;
 }
 
-
-header {
-    background-color: #403022;
-    color: #DBDDD8;
-    text-align: center;
-    padding: 50px 20px;
-    border-bottom: 8px solid #735840;
-    font-family: 'Limeligh Script', cursive;
+.registro h2 {
+color: var(--color-acento-lider);
+margin-bottom: 10px;
 }
 
-header h1 {
-    font-size: 48px;
-    letter-spacing: 3px;
-    font-family: 'Limeligh Script', cursive;
+.registro p {
+margin-bottom: 15px;
 }
 
-
-main {
-    width: 85%;
-    max-width: 900px;
-    margin: 40px auto;
+.registro form {
+max-width: 400px;
 }
 
-
-
-section {
-    background-color: #DBDDD8;
-    border-left: 6px solid #A68D77;
-    margin-bottom: 30px;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(38, 21, 11, 0.15);
-    font-family: 'Limeligh Script', cursive;
+.registro button {
+background-color: var(--color-acento-lider);
 }
 
-section h2 {
-    color: #403022;
-    font-size: 30px;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #A68D77;
-    padding-bottom: 8px;
-    font-family: 'Limeligh Script', cursive;
+.registro button:hover {
+background-color: #1d65f5;
 }
-
-section h3 {
-    color: #735840;
-    font-size: 21px;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    font-family: 'Limeligh Script', cursive;
-}
-
-section p {
-    color: #26150B;
-    font-size: 17px;
-    font-family: 'Limeligh Script', cursive;
-}
-
-/* ==============================
-   LISTAS
-   ============================== */
-
-ol {
-    padding-left: 25px;
-}
-
-li {
-    margin-bottom: 12px;
-    color: #26150B;
-    font-size: 17px;
-}
-
-/* ==============================
-   ENLACES
-   ============================== */
-
-a {
-    display: inline-block;
-    background-color: #403022;
-    color: #dbddd8;
-    text-decoration: none;
-    padding: 13px 25px;
-    border-radius: 6px;
-    font-weight: bold;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-}
-
-a:hover {
-    background-color: #735840;
-}
-
-/* ==============================
-   ESLOGAN
-   ============================== */
-
-section:last-of-type {
-    text-align: center;
-    border-left: none;
-    border-top: 6px solid #735840;
-}
-
-section:last-of-type strong {
-    display: block;
-    color: #403022;
-    font-size: 25px;
-    font-style: italic;
-    margin-top: 10px;
-}
-
-/* ==============================
-   DISEÑO RESPONSIVO
-   ============================== */
 
 @media (max-width: 600px) {
-
-    header {
-        padding: 35px 15px;
-    }
-
-    header h1 {
-        font-size: 38px;
-    }
-
-    main {
-        width: 92%;
-        margin: 25px auto;
-    }
-
-    section {
-        padding: 20px;
-    }
-
-    section h2 {
-        font-size: 25px;
-    }
-
-    section p,
-    li {
-        font-size: 16px;
-    }
-
-    section:last-of-type strong {
-        font-size: 21px;
-    }
+.registro {
+padding: 15px;
+}
 }
